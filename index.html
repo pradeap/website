@@ -1,72 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+title: Home
+layout: default
+background: '/img/bg-index.jpg'
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mechanic</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
+<style>
+  /* Apply the Pacifico font */
+  .catchy-text {
+      font-family: 'Pacifico', cursive;
+      font-style: italic;
+      font-weight: bold;
+  }
+</style>
 
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 0.5em;
-            text-align: center;
-        }
+<!-- Home Intro
+================================================== -->
+{% if page.url == "/" %} 
+<div class="rounded mb-5 hero">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-6">      
+      <h1 class="font-weight-bold mb-4 serif-font"><span class="catchy-text">   Data Mechanic </span></h1>
+      <p class="lead mb-4"></p>
+      <!-- <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-5 btn-lg">About me</a> -->
+    </div>
+    <!-- <div class="col-md-6 text-right pl-0 pl-lg-4">
+      <img class="intro" height="500" src="{{site.baseurl}}/assets/images/blog_front.gif">      
+    </div> -->
+  </div>
+</div>
+{% endif %}
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 1em;
-            margin: 0 0.5em;
-        }
+<!-- Featured
+================================================== -->
+<section class="row">
+  {% for post in site.posts %}
+      {% if post.featured == true %}
+          <div class="col-md-4 mb-5">
+          {% include postbox.html %}
+          </div>
+      {% endif %}
+  {% endfor %}
+  </div>
+</section>
 
-        section {
-            padding: 1em;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 1em;
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1>Data Engineering</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <section>
-        <h2>Welcome to Data Mechanic!</h2>
-        <p>This is a simple website. You can customize this section with your content for data engineering.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Your Website Name. All rights reserved.</p>
-    </footer>
-</body>
-
-</html>
-
+<!-- Posts List with Sidebar (except featured)
+================================================== -->
+<section class="row">
+  <div class="col-sm-8">
+    <div class="row">
+      {% for post in paginator.posts %}
+      {% unless post.featured == true %}
+      <div class="col-md-6 mb-5">
+        {% include postbox.html %}
+      </div>
+      {% endunless %}
+      {% endfor %}
+    </div>
+    <!-- Pagination -->
+    <div class="bottompagination">
+      <span class="navigation" role="navigation">
+          {% include pagination.html %}
+      </span>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    {% include sidebar.html %}
+  </div>
+</section>
