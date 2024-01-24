@@ -1,7 +1,7 @@
 title: "Data Mechanic"
 email: pradeap@gmail.com
 timezone: UTC
-baseurl: "/website-datamechanic/"
+baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
