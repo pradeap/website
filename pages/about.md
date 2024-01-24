@@ -15,7 +15,9 @@ image: assets/images/about.png
 
 A self learnt Data Engineer trying to built a enterprise level data architecture. 
 
-Why Data Mechanic?, transition from the mechanical domain to data domain is hard, but it is rewarding in terms of exploration. Combining data and mechanical,
+Why Data Mechanic?
+
+Transitioning from the mechanical domain to the data domain may be challenging, yet it proves rewarding in terms of exploration. Combining data and mechanical expertise opens up new avenues for innovation
 
 Hence
 
