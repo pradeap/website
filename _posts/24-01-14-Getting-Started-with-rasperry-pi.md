@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Setting up Rasperry Pi Device"
-categories: [ Rasperry Pi ]
+title:  "Setting up Raspberry Pi Device"
+categories: [ Raspberry Pi ]
 image: assets/images/setting_up_rasperry_pi/rasperry_pi_image.jpg
 ---
 
@@ -16,7 +16,7 @@ Moving in to the software, the device doesn't come with a pre-installed OS, like
 The micro SD card functions as the Pi device's hard disk. The Raspberry Pi OS serves as the operating system for the device and must be installed on the SD card before inserting it into the device slot.
 
 
-## Installing the Rasperry Pi OS in the SD card. 
+## Installing the Raspberry Pi OS in the SD card. 
 
 <li>Insert the memory card in the laptop (Windows/MAC/Linux)</li>
 <li>Install the Raspberry Pi Imager from the link: </li>
